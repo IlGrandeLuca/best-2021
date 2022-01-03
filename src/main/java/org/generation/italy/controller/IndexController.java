@@ -37,7 +37,7 @@ public class IndexController {
 	@GetMapping("/movies")
 	public String moviesList(Model model) {
 
-		model.addAttribute("movies", Arrays.asList("Spiderman", "Dune", "Boh"));
+		model.addAttribute("movies", Arrays.asList("Spider-Man: No Way Home", "Dune: Part One", "Eternals"));
 
 		return "movies";
 	}
@@ -45,7 +45,8 @@ public class IndexController {
 	@GetMapping("/songs")
 	public String songsList(Model model) {
 
-		model.addAttribute("songs", Arrays.asList("AAAA", "BBBB", "CCCC", "DDDD", "EEEE"));
+		model.addAttribute("songs", Arrays.asList("Splinter Wolf", "Akeboshi", "Zero Eclipse", "Call of Silence",
+				"You See Big Girl / T:T"));
 
 		return "songs";
 	}

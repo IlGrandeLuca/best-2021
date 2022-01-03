@@ -1,19 +1,23 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<title>Movies</title>
-	</head>
-	<body>
-		<h1>Best movies of 2021</h1>
-		<div th:if="${movies.size() > 0}">
-			<h2>Movies in database</h2>
-			<ul>
-				<li th:each="movie : ${movies}">
-					<p th:text="${movie}"></p>
-				</li>	
-			</ul><br>
-			<a th:href="@{'C:\Users\lucai\Documents\workspace-spring-tool-suite-4-4.12.1.RELEASE\best-2021'}" th:text="'Home'"></a>
-		</div>
-		<p th:unless="${movies.size() > 0}">Zero movies in database</p>
-	</body>
+
+<head>
+	<title>Movies</title>
+</head>
+
+<body>
+	<h1>Best movies of 2021</h1>
+	<div th:if="${movies.size() > 0}">
+		<h2>Movies in database</h2>
+		<ul>
+			<li th:each="movie : ${movies}">
+				<p th:text="${movie}"></p>
+			</li>
+		</ul><br>
+		<a th:href="@{/../}"
+			th:text="'Home'"></a>
+	</div>
+	<p th:unless="${movies.size() > 0}">Zero movies in database</p>
+</body>
+
 </html>
